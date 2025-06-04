@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="src/output.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="font-sans">
+  <!-- Navbar -->
+  <div class="navbar relative top-0 bg-black text-neutral-400 flex justify-between  items-center px-6 h-[80px] w-full z-10 ">
+    <h1 class="text-2xl sm:text-3xl  font-semibold">AZHAN</h1>
+    <div class="flex items-center gap-[10px] sm:gap-[20px] md:gap-[30px] lg:gap-[40px]">
+        <a href="#" class="hover:text-white">Home</a>
+        <a href="#" class="hover:text-white ">About</a>
+        <a href="#" class="hover:text-white">Contact</a>
+    </div>
+  </div>
+  <!-- Hero Section -->
+  <div class=" pt-[60px] min-h-[750px] sm:pb-[20px] lg:pb-[40px] w-full bg-cover bg-center bg-fixed sm:flex sm:items-center sm:justify-around sm:gap-[20px]" style="background-image: url('pics/first-image.jpg');">
+    <div class="flex justify-center mb-[20px]">
+        <img class="h-[300px] w-[300px] sm:h-[250px] sm:min-w-[250px] md:h-[300px] md:w-[300px] rounded-[140px] sm:rounded-full shadow-lg border-4 border-white object-cover object-center" src="pics/my-image.jpg" alt="Azhan">
+    </div>
+    <div class="text-center max-w-[550px]">
+        <h2 class="text-4xl font-bold mb-4 text-white">Hi, I'm Azhan</h2>
+        <p class="text-2xl text-white">
+          I'm a passionate Front-End Web Developer focused on building responsive and user-friendly websites using HTML, CSS, JavaScript, and Tailwind CSS. I'm on a journey to grow my skills and bring ideas to life on the web.
+        </p>
+        <div class="btns flex justify-center gap-[50px] items-center">
+            <button class=" relative top-[20px] animate-pulse bg-white text-black hover:bg-yellow-700 hover:text-white h-[40px] w-[100px] border-none rounded-xl">
+                Hire me!
+            </button>
+            <a href="#">
+                <button class=" relative top-[20px] animate-pulse bg-white text-black hover:bg-yellow-700 hover:text-white h-[40px] w-[100px] border-none rounded-xl">
+                    Contact me
+                </button>
+            </a>
+        </div>
+    </div>
+  </div> 
+    <!-- About me  -->
+    <div class="h-fit w-full bg-fixed bg-cover bg-center my-auto" style="background-image: url('pics/aboutme.jpg');">
+        <h1 class="text-4xl text-center pt-[30px] font-bold text-white">About Me</h1>
+        <div class="flex flex-col md:flex-row justify-center items-center gap-[30px] px-4 py-10">
+            <div class="max-w-[600px] w-full text-white relative">
+            <!-- Paragraph container -->
+               <p id="about-text" class="text-lg leading-relaxed overflow-hidden max-h-[180px] sm:max-h-none transition-all duration-500">
+               I am Azhan, a dedicated and passionate Front-End Web Developer focused on creating responsive and user-friendly websites using HTML, CSS, JavaScript, and Tailwind CSS. Academically, I have consistently excelled, scoring 90% in SSC Part 1 and 94% in SSC Part 2, which reflects my strong commitment and discipline. As a beginner developer, I am continuously learning and building projects to sharpen my skills, with a focus on writing clean code and delivering engaging web experiences. I am excited to grow in the tech field and contribute to real-world projects.
+               </p>
+               <!-- Read more/less button (only on small screens) -->
+               <button id="read-more-btn" class="mt-4 underline text-yellow-300 sm:hidden">Read more</button>
+            </div>
+            <div class="mt-6 md:mt-0">
+            <img class="h-[300px] min-w-[300px]  rounded-full border-4 object-cover object-center border-white" src="pics/aboutmelogo.jpg" alt="">
+            </div>   
+        </div>
+    </div>
+    <!-- Education Flip Cards -->
+    <div class="bg-cover bg-bottom bg-no-repeat pb-[50px] w-full h-fit" style="background-image: url('pics/educationimage.avif');">
+        <h1 class="text-5xl pt-[20px] text-white text-center font-bold">My Education</h1>
+        <!-- Cards -->
+        <div class="flex justify-center items-center flex-wrap gap-[10px] sm:gap-[40px]">
+            <!-- first one  -->
+            <div class="w-[275px] h-[330px] sm:w-[270px] sm:h-[320px] md:w-[250px] md:h-[300px] lg:w-[300px] lg:h-[350px] relative [perspective:1200px] group mt-10">
+                <div class="w-full h-full duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateX(180deg)] relative">
+                    <!-- Front Side -->
+                    <div class="text-white absolute w-full h-full bg-gradient-to-tr from-cyan-600 to-gray-900 flex flex-col items-center text-center text-2xl font-bold rounded-xl shadow-lg [backface-visibility:hidden] p-4">
+                        <h1 class="text-4xl ">School</h1>
+                        <p class="mt-[12px] sm:mt-[12px] md:mt-[15px] lg:mt-[17px] lg:leading-loose text-base font-medium">My educational journey began at Army Public School COD Karachi, a place where discipline, academic excellence, and leadership were nurtured from day one.Here, I developed a passion for learning, teamwork, and continuous improvement.</p>
+                        <p></p>
+                    </div>
+                    <!-- Back Side -->
+                    <div class="absolute w-full h-full bg-gray-900 text-white flex flex-col items-center justify-center text-center rounded-xl shadow-lg [transform:rotateX(180deg)] [backface-visibility:hidden] p-4">
+                        <h3 class="text-xl mb-2">SSC I (Class 9) (94%)</h3>
+                        <h3 class="text-xl mb-2">SSC II (Matric) (89%)</h3>
+                        <p class="text-sm mt-2">Consistent top performer in School with a focus on tech & development.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- second one  -->
+            <div class="w-[275px] h-[330px] sm:w-[270px] sm:h-[320px] md:w-[250px] md:h-[300px] lg:w-[300px] lg:h-[350px] relative [perspective:1200px] group mt-10">
+                <div class="w-full h-full duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateX(180deg)] relative">
+                    <!-- Front Side -->
+                    <div class="absolute w-full h-full bg-gradient-to-tr from-cyan-600 to-gray-900 text-white flex flex-col items-center justify-center text-center text-2xl font-bold rounded-xl shadow-lg [backface-visibility:hidden] p-4">
+                        <h2 class="text-4xl ">Collage</h2>
+                        <p class="mt-[12px] sm:mt-[12px] md:mt-[15px] lg:mt-[17px] lg:leading-loose text-base font-medium">Through consistent effort at Army Public College COD Karachi, significant academic and personal development was achieved.Army Public College COD Karachi was a place where steady dedication supported continuous academic and personal growth.</p>
+                    </div>
+                    <!-- Back Side -->
+                    <div class="absolute w-full h-full bg-gray-900 text-white flex flex-col items-center justify-center text-center rounded-xl shadow-lg [transform:rotateX(180deg)] [backface-visibility:hidden] p-4">
+                        <h3 class="text-xl mb-2">1st Year (pending) Estimated(90%+)</h3>
+                        <h3 class="text-xl mb-2">2st Year (pending) Estimated(90%+)</h3>
+                        <p class="text-sm mt-2">Consistent top performer with a focus on tech & development.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- thirde one   -->
+            <div class="w-[275px] h-[330px] sm:w-[270px] sm:h-[320px] md:w-[250px] md:h-[300px] lg:w-[300px] lg:h-[350px] relative [perspective:1200px] group mt-10">
+                <div class="w-full h-full duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateX(180deg)] relative">
+                    <!-- Front Side -->
+                    <div class="absolute w-full h-full bg-gradient-to-tr from-cyan-600 to-gray-900 text-white flex flex-col items-center text-center text-2xl font-bold rounded-xl shadow-lg [backface-visibility:hidden] p-4">
+                        <h2 class="text-4xl text-start">University</h2>
+                        <p class="mt-[12px] sm:mt-[12px] md:mt-[15px] lg:mt-[17px] lg:leading-loose text-base font-medium">Tap to see more.</p>
+                    </div>
+                    <!-- Back Side -->
+                    <div class="absolute w-full h-full bg-gray-900 text-white flex flex-col items-center justify-center text-center rounded-xl shadow-lg [transform:rotateX(180deg)] [backface-visibility:hidden] p-4">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et accusamus architecto ipsum possimus maiores, accusantium cupiditate commodi hic est reprehenderit tempore tempora temporibus quidem error nostrum enim sed, ducimus doloremque?</p>
+                </div>
+            </div> 
+        </div>
+    </div>
+
+    <!-- contact section -->
+<div class="relative p-8 rounded-lg h-fit w-full mx-auto mt-20 shadow-xl text-white font-semibold bg-cover bg-no-repeat bg-center overflow-hidden" style="background-image: url('pics/contactimage.webp');">
+
+  <!-- Gradient overlay -->
+  <!-- <div class="absolute inset-0 bg-gradient-to-br from-white/70 via-bisque/80 to-white/60 z-0 rounded-lg backdrop-blur-xs"></div> -->
+
+  <!-- Title -->
+  <h2 class="relative text-5xl mb-4 text-center font-bold z-10 text-white">Contact Me</h2>
+
+  <!-- Short intro -->
+  <p class="relative z-10 text-center max-w-xl mx-auto text-base text-white mb-6">Whether you have a project idea, a question, or just want to say hi, I'm just a message away. Let's connect!</p>
+
+  <!-- Contact details -->
+  <div class="relative z-10 flex flex-col gap-6 text-lg">
+    <div class="flex items-center gap-4 hover:scale-105 transition-transform">
+      <span class="text-2xl"><i class="fa-brands fa-instagram"></i></span>
+      <a href="https://instagram.com/mazhanbaig" target="_blank" class="hover:underline">Instagram: @mazhanbaig</a>
+    </div>
+    <div class="flex items-center gap-4 hover:scale-105 transition-transform">
+      <span class="text-2xl"><i class="fa-brands fa-whatsapp"></i> </span>
+      <a href="https://wa.me/923227895432" target="_blank" class="hover:underline">WhatsApp: +92 322 7895432</a>
+    </div>
+    <div class="flex items-center gap-4 hover:scale-105 transition-transform">
+      <span class="text-2xl"><i class="fa-brands fa-whatsapp"></i></span>
+      <a href="tel:+923227895432" class="hover:underline">Phone: +92 322 7895432</a>
+    </div>
+    <div class="flex items-center gap-4 hover:scale-105 transition-transform">
+      <span class="text-2xl"><i class="fa-regular fa-envelope"></i></span>
+      <a href="mailto:mazhanwebdev@example.com" class="hover:underline">Email: mazhanwebdev@example.com</a>
+    </div>
+    <div class="flex items-center gap-4 hover:scale-105 transition-transform">
+      <span class="text-2xl"><i class="fa-solid fa-location-dot"></i></span>
+      <span>Karachi, Pakistan</span>
+    </div>
+  </div>
+
+  <!-- Closing message -->
+  <p class="relative mt-10 text-center text-sm text-white z-10 italic">Open to collaborations, feedback, or just a friendly chat. Let's build something meaningful together 🚀</p>
+
+  <!-- Decorative glow -->
+  <div class="absolute w-[120px] h-[120px] bg-black opacity-10 rounded-full top-[10%] right-[10%] animate-ping z-0"></div>
+</div>
+
+    
+    
+    <script src="app.js"></script>
+</body>
+</html>
