@@ -1,0 +1,23 @@
+class person {
+    constructor(name) {
+        this.name=name;
+    }
+    eat(){
+        console.log("eat")
+    }
+    drink(){
+        console.log('drink')
+    }
+    work(){
+        console.log('none')
+    }
+    name(name){
+        console.log(this.name);
+    }
+}
+const student1 = new person('azhan')
+const student2 = new person('zyan')
+const student3 = new person('ali')
+const student4 = new person('hareem')
+
+console.log(student1,student2,student3,student4)

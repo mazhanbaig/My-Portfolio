@@ -1,242 +1,375 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en" class="h-full scroll-smooth">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="src/output.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Predators AI</title>
+  <meta name="description" content="Azhan - Front-End Developer Portfolio">
+  <meta name="keywords" content="Front-End, HTML, CSS, JavaScript, Tailwind, React">
+  <meta name="author" content="Azhan">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link href="src/output.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="font-sans">
-  <!-- Modern Navbar -->
-<nav class="bg-black/70 backdrop-blur-md text-white fixed top-0 left-0 w-full z-50 shadow-md">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <!-- Top bar -->
-    <div class="flex items-center justify-between h-[80px]">
+
+<body class="font-sans bg-[#0b0b0f] text-white">
+
+  <!-- Navbar -->
+  <nav class="bg-black/70 backdrop-blur-md text-white fixed top-0 left-0 w-full z-50 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-[80px]">
       <h1 class="text-2xl sm:text-3xl font-bold tracking-wide">
         <span class="bg-gradient-to-r from-purple-400 to-blue-500 text-transparent bg-clip-text">AZHAN</span>
       </h1>
-      <!-- Desktop Menu -->
       <div class="hidden md:flex space-x-6">
         <a href="index.html" class="hover:underline underline-offset-4 transition">Home</a>
         <a href="about.html" class="hover:underline underline-offset-4 transition">About</a>
-        <a href="contact.html" class="hover:underline underline-offset-4 transition">Contact</a>
+        <a href="#contact" class="hover:underline underline-offset-4 transition">Contact</a>
       </div>
-      <!-- Hamburger Button -->
-      <div class="md:hidden">
-        <button id="menu-toggle" class="text-white focus:outline-none text-2xl">
-          <i class="fas fa-bars"></i>
-        </button>
+      <button id="menu-toggle" class="md:hidden text-white focus:outline-none text-2xl">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div id="mobile-menu"
+        class="md:hidden hidden bg-black text-white w-[100px] h-fit flex-col space-y-4 py-4 pl-[5px] absolute z-50 right-[10px] md:right-20">
+        <a href="index.html" class="block text-white hover:underline">Home</a>
+        <a href="about.html" class="block text-white hover:underline">About</a>
+        <a href="#contact" class="block text-white hover:underline">Contact</a>
       </div>
-      <!-- Mobile Menu (Below the navbar) -->
-    <div id="mobile-menu" class="md:hidden hidden bg-black text-white w-[100px] h-fit flex-col space-y-4 py-4 pl-[5px] absolute z-50 right-[10px] md:right-20">
-      <a href="index.html" class="block text-white hover:underline">Home</a>
-      <a href="about.html" class="block text-white hover:underline">About</a>
-      <a href="contact.html" class="block text-white hover:underline">Contact</a>
     </div>
-    </div>
-  </nav>  
+  </nav>
+
   <!-- Hero Section -->
-  <div class=" pt-[60px] min-h-[750px] sm:pb-[20px] lg:pb-[40px] w-full bg-cover bg-center bg-fixed  sm:flex sm:items-center sm:justify-around sm:gap-[20px]" style="background-image: url('pics/first-image.jpg');">
-    <div class="flex justify-center mb-[20px] mt-[60px] sm:">
-        <img class="h-[300px] w-[300px] sm:h-[300px]  sm:min-w-[300px] md:h-[300px] md:w-[300px] rounded-[140px] sm:rounded-full shadow-lg border-4 border-white object-cover object-center" src="pics/my-image.jpg" alt="Azhan">
-    </div>
+  <section
+    class="pt-[60px] min-h-[750px] sm:pb-[20px] lg:pb-[40px] w-full bg-cover bg-center bg-fixed sm:flex sm:items-center sm:justify-around sm:gap-[20px]"
+    style="background-image: url('pics/first-image.jpg');">
+    <img
+      class="h-[300px] w-[300px] sm:h-[300px] sm:min-w-[300px] md:h-[300px] md:w-[300px] rounded-[140px] sm:rounded-full shadow-lg border-4 border-white object-cover object-center mt-[60px] sm:mb-0 mb-[20px]"
+      src="pics/my-image.jpg" alt="Azhan">
     <div class="text-center mx-auto max-w-[550px]">
-        <h2 class="text-4xl font-bold mb-4 text-white">Hi, I'm Azhan</h2>
-        <p class="text-2xl text-white">
-          I'm a passionate Front-End Web Developer focused on building responsive and user-friendly websites using HTML, CSS, JavaScript, and Tailwind CSS. I'm on a journey to grow my skills and bring ideas to life on the web.
-        </p>
-        <div class="btns flex justify-center gap-[50px] items-center">
-            <button class=" relative top-[20px] animate-pulse bg-white text-black hover:bg-yellow-700 hover:text-white h-[40px] w-[100px] border-none rounded-xl">
-                Hire me!
-            </button>
-            <a href="#">
-                <button class=" relative top-[20px] animate-pulse bg-white text-black hover:bg-yellow-700 hover:text-white h-[40px] w-[100px] border-none rounded-xl">
-                    Contact me
-                </button>
-            </a>
-        </div>
+      <h2 class="text-4xl font-bold mb-4 text-white">Hi, I'm Azhan</h2>
+      <p class="text-2xl text-white">I'm a passionate Front-End Web Developer focused on building responsive and
+        user-friendly websites using HTML, CSS, JavaScript, and Tailwind CSS.</p>
+      <div class="btns flex justify-center gap-[50px] items-center">
+        <button
+          class="relative top-[20px] animate-pulse bg-white text-black hover:bg-yellow-700 hover:text-white h-[40px] w-[100px] border-none rounded-xl">Hire
+          me!</button>
+        <a href="#contact">
+          <button
+            class="relative top-[20px] animate-pulse bg-white text-black hover:bg-yellow-700 hover:text-white h-[40px] w-[100px] border-none rounded-xl">Contact
+            me</button>
+        </a>
+      </div>
     </div>
-  </div> 
-    <!-- About me Section -->
-    <div class="h-fit w-full bg-fixed bg-cover bg-center my-auto" style="background-image: url('pics/aboutme.jpg');">
-      <div class="bg-black/70 backdrop-blur-xs w-full h-full px-4 py-10">
+  </section>
+  <!-- About Me -->
+  <section class="h-fit w-full bg-fixed bg-cover bg-center my-auto" style="background-image: url('pics/aboutme.jpg');">
+    <div class="bg-black/70 backdrop-blur-xs w-full h-full px-4 py-10">
       <h1 class="text-4xl text-center font-bold text-white mb-8">About Me</h1>
-        <div class="flex flex-col md:flex-row justify-center items-center gap-[30px]">
-        <!-- Text Content -->
-          <div class="max-w-[600px] w-full text-white space-y-6">
-            <div>
-              <h2 class="text-2xl text-yellow-300 font-semibold">Who I Am</h2>
-              <p class="text-lg leading-relaxed">
-              I’m Azhan, a passionate Front-End Web Developer who loves building intuitive and visually compelling digital experiences. I enjoy turning ideas into interactive interfaces using HTML, CSS, JavaScript, and Tailwind CSS.
-              </p>
-            </div>
-            <div>
-              <h2 class="text-2xl text-yellow-300 font-semibold">My Mission</h2>
-              <p class="text-lg leading-relaxed">
-              My goal is to design clean, functional websites that offer users an enjoyable and seamless experience. I’m deeply focused on creating projects that are both user-friendly and performance-oriented.
-              </p>
-            </div>
-            <div>
-              <h2 class="text-2xl text-yellow-300 font-semibold">Beyond Coding</h2>
-              <p class="text-lg leading-relaxed">
-              Outside of development, I’m a curious learner, space enthusiast, and chess player. I love exploring how things work and applying logical thinking in and out of code.
-              </p>
-            </div>
-            <div>
-              <h2 class="text-2xl text-yellow-300 font-semibold">Always Improving</h2>
-              <p class="text-lg leading-relaxed">
-              I regularly sharpen my skills through platforms like freeCodeCamp, YouTube tutorials, and by building real-world projects. Growth is a journey, and I’m committed to learning something new every day.
-              </p>
-            </div>
+      <div class="flex flex-col md:flex-row justify-center items-center gap-[30px]">
+        <div class="max-w-[600px] w-full text-white space-y-6">
+          <div>
+            <h2 class="text-2xl text-yellow-300 font-semibold">Who I Am</h2>
+            <p class="text-lg leading-relaxed">I’m Azhan, a passionate Front-End Web Developer who loves building
+              intuitive and visually compelling digital experiences. I enjoy turning ideas into interactive interfaces
+              using HTML, CSS, JavaScript, and Tailwind CSS.</p>
+          </div>
+          <div>
+            <h2 class="text-2xl text-yellow-300 font-semibold">My Mission</h2>
+            <p class="text-lg leading-relaxed">My goal is to design clean, functional websites that offer users an
+              enjoyable and seamless experience. I’m deeply focused on creating projects that are both user-friendly and
+              performance-oriented.</p>
+          </div>
+          <div>
+            <h2 class="text-2xl text-yellow-300 font-semibold">Beyond Coding</h2>
+            <p class="text-lg leading-relaxed">Outside of development, I’m a curious learner, space enthusiast, and
+              chess player. I love exploring how things work and applying logical thinking in and out of code.</p>
+          </div>
+          <div>
+            <h2 class="text-2xl text-yellow-300 font-semibold">Always Improving</h2>
+            <p class="text-lg leading-relaxed">I regularly sharpen my skills through platforms like freeCodeCamp,
+              YouTube tutorials, and by building real-world projects. Growth is a journey, and I’m committed to learning
+              something new every day.</p>
+          </div>
           <div>
             <h2 class="text-2xl text-yellow-300 font-semibold">Future Goals</h2>
-            <p class="text-lg leading-relaxed">
-            I plan to learn JavaScript frameworks like React, contribute to open-source, and collaborate with other developers to solve meaningful problems through code.
-            </p>
+            <p class="text-lg leading-relaxed">I plan to learn JavaScript frameworks like React, contribute to
+              open-source, and collaborate with other developers to solve meaningful problems through code.</p>
           </div>
         </div>
-        <!-- Profile Image -->
-        <div class="mt-6 md:mt-0">
-          <img class="h-[300px] min-w-[300px] rounded-full border-4 object-cover object-center border-white shadow-lg" src="pics/aboutmelogo.jpg" alt="Azhan">
-        </div>   
+        <img class="h-[300px] min-w-[300px] rounded-full border-4 object-cover object-center border-white shadow-lg"
+          src="pics/aboutmelogo.jpg" alt="Azhan">
       </div>
-     </div>
-   </div>
-    <!-- Education Flip Cards -->
-    <div class="bg-cover bg-bottom bg-no-repeat pb-[50px] w-full h-fit" style="background-image: url('pics/educationimage.avif');">
-        <h1 class="text-5xl pt-[20px] text-white text-center font-bold">My Education</h1>
-        <!-- Cards -->
-        <div class="flex justify-center items-center flex-wrap gap-[10px] sm:gap-[40px]">
-            <!-- first one  -->
-            <div class="w-[275px] h-[330px] sm:w-[270px] sm:h-[320px] md:w-[250px] md:h-[300px] lg:w-[300px] lg:h-[350px] relative [perspective:1200px] group mt-10">
-                <div class="w-full h-full duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateX(180deg)] relative">
-                    <!-- Front Side -->
-                    <div class="text-white absolute w-full h-full bg-gradient-to-tr from-cyan-600 to-green-500 flex flex-col items-center text-center text-2xl font-bold rounded-xl shadow-lg [backface-visibility:hidden] p-4">
-                        <h1 class="text-4xl ">School</h1>
-                        <p class="mt-[12px] sm:mt-[12px] md:mt-[10px] lg:mt-[17px] lg:leading-loose text-base font-medium">My educational journey began at Army Public School COD Karachi, a place where discipline, academic excellence, and leadership were nurtured from day one.Here, I developed a passion for learning, teamwork, and continuous improvement.</p>
-                        <p></p>
-                    </div>
-                    <!-- Back Side -->
-                    <div class="absolute w-full h-full bg-gray-900 text-white flex flex-col items-center justify-center text-center rounded-xl shadow-lg [transform:rotateX(180deg)] [backface-visibility:hidden] p-4">
-                        <h3 class="text-xl mb-2">SSC I (Class 9) (94%)</h3>
-                        <h3 class="text-xl mb-2">SSC II (Matric) (89%)</h3>
-                        <p class="text-sm mt-2">Consistent top performer in School with a focus on tech & development.</p>
-                    </div>
-                </div>
-            </div>
-            <!-- second one  -->
-            <div class="w-[275px] h-[330px] sm:w-[270px] sm:h-[320px] md:w-[250px] md:h-[300px] lg:w-[300px] lg:h-[350px] relative [perspective:1200px] group mt-10">
-                <div class="w-full h-full duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateX(180deg)] relative">
-                    <!-- Front Side -->
-                    <div class="absolute w-full h-full bg-gradient-to-tr from-cyan-600 to-green-500 text-white flex flex-col items-center justify-center text-center text-2xl font-bold rounded-xl shadow-lg [backface-visibility:hidden] p-4">
-                        <h2 class="text-4xl ">Collage</h2>
-                        <p class="mt-[12px] sm:mt-[12px] md:mt-[15px] lg:mt-[17px] lg:leading-loose text-base font-medium">Through consistent effort at Army Public College COD Karachi, significant academic and personal development was achieved.Army Public College COD Karachi was a place where steady dedication supported continuous academic and personal growth.</p>
-                    </div>
-                    <!-- Back Side -->
-                    <div class="absolute w-full h-full bg-gray-900 text-white flex flex-col items-center justify-center text-center rounded-xl shadow-lg [transform:rotateX(180deg)] [backface-visibility:hidden] p-4">
-                        <h3 class="text-xl mb-2">1st Year (pending) Estimated(90%+)</h3>
-                        <h3 class="text-xl mb-2">2st Year (pending) Estimated(90%+)</h3>
-                        <p class="text-sm mt-2">Consistent top performer with a focus on tech & development.</p>
-                    </div>
-                </div>
-            </div>
-            <!-- thirde one   -->
-            <div class="w-[275px] h-[330px] sm:w-[270px] sm:h-[320px] md:w-[250px] md:h-[300px] lg:w-[300px] lg:h-[350px] relative [perspective:1200px] group mt-10">
-                <div class="w-full h-full duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateX(180deg)] relative">
-                    <!-- Front Side -->
-                    <div class="absolute w-full h-full bg-gradient-to-tr from-cyan-600 to-green-500 text-white flex flex-col items-center text-center text-2xl font-bold rounded-xl shadow-lg [backface-visibility:hidden] p-4">
-                        <h2 class="text-4xl text-start">University</h2>
-                        <p class="mt-[12px] sm:mt-[12px] md:mt-[15px] lg:mt-[17px] lg:leading-loose text-base font-medium">Tap to see more.</p>
-                    </div>
-                    <!-- Back Side -->
-                    <div class="absolute w-full h-full bg-gray-900 text-white flex flex-col items-center justify-center text-center rounded-xl shadow-lg [transform:rotateX(180deg)] [backface-visibility:hidden] p-4">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et accusamus architecto ipsum possimus maiores, accusantium cupiditate commodi hic est reprehenderit tempore tempora temporibus quidem error nostrum enim sed, ducimus doloremque?</p>
-                </div>
-            </div> 
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="bg-black text-white py-16 px-4">
+    <h2 class="text-4xl font-extrabold text-center mb-12 ">My Skills</h2>
+    <div class="max-w-5xl mx-auto grid gap-8 md:grid-cols-2">
+
+      <!-- HTML -->
+      <div class="space-y-2">
+        <div class="flex items-center justify-between">
+          <p class="flex items-center gap-2 text-lg font-medium">
+            <i class="fab fa-html5 text-orange-500 text-2xl"></i> HTML
+          </p>
+          <span class="text-sm text-gray-300">90%</span>
         </div>
-    </div>
-
-    <!-- contact section -->
-<div class="relative p-8 rounded-lg h-fit w-full mx-auto mt-20 shadow-xl text-white font-semibold bg-cover bg-no-repeat bg-center overflow-hidden" style="background-image: url('pics/contactimage.webp');">
-
-  <!-- Gradient overlay -->
-  <!-- <div class="absolute inset-0 bg-gradient-to-br from-white/70 via-bisque/80 to-white/60 z-0 rounded-lg backdrop-blur-xs"></div> -->
-
-  <!-- Title -->
-  <h2 class="relative text-5xl mb-4 text-center font-bold z-10 text-white">Contact Me</h2>
-
-  <!-- Short intro -->
-  <p class="relative z-10 text-center max-w-xl mx-auto text-base text-white mb-6">Whether you have a project idea, a question, or just want to say hi, I'm just a message away. Let's connect!</p>
-
-  <!-- Contact details -->
-  <div class="relative z-10 flex flex-col gap-6 text-lg">
-    <div class="flex items-center gap-4 hover:scale-105 transition-transform">
-      <span class="text-2xl"><i class="fa-brands fa-instagram"></i></span>
-      <a href="https://instagram.com/mazhanbaig" target="_blank" class="hover:underline">Instagram: @mazhanbaig</a>
-    </div>
-    <div class="flex items-center gap-4 hover:scale-105 transition-transform">
-      <span class="text-2xl"><i class="fa-brands fa-whatsapp"></i> </span>
-      <a href="https://wa.me/923227895432" target="_blank" class="hover:underline">WhatsApp: +92 322 7895432</a>
-    </div>
-    <div class="flex items-center gap-4 hover:scale-105 transition-transform">
-      <span class="text-2xl"><i class="fa-brands fa-whatsapp"></i></span>
-      <a href="tel:+923227895432" class="hover:underline">Phone: +92 322 7895432</a>
-    </div>
-    <div class="flex items-center gap-4 hover:scale-105 transition-transform">
-      <span class="text-2xl"><i class="fa-regular fa-envelope"></i></span>
-      <a href="mailto:mazhanwebdev@example.com" class="hover:underline">Email: mazhanwebdev@example.com</a>
-    </div>
-    <div class="flex items-center gap-4 hover:scale-105 transition-transform">
-      <span class="text-2xl"><i class="fa-solid fa-location-dot"></i></span>
-      <span>Karachi, Pakistan</span>
-    </div>
-  </div>
-  <!-- Closing message -->
-  <p class="relative mt-10 text-center text-sm text-white z-10 italic">Open to collaborations, feedback, or just a friendly chat. Let's build something meaningful together 🚀</p>
-
-  <!-- Decorative glow -->
-  <div class="absolute w-[120px] h-[120px] bg-black opacity-10 rounded-full top-[10%] right-[10%] animate-ping z-0"></div>
-</div>
-
-  <!-- Footer -->
-  <footer class="relative bg-black text-neutral-400 pt-5 px-8 mt-20 overflow-hidden border-t border-neutral-700">
-      <!-- Glowing orbs -->
-    <div class="absolute w-[150px] h-[150px] bg-yellow-500 opacity-20 rounded-full top-[-40px] left-[-40px] animate-pulse blur-2xl"></div>
-    <div class="absolute w-[150px] h-[150px] bg-cyan-400 opacity-40 rounded-full bottom-[-60px] right-[-60px] animate-pulse blur-2xl"></div>
-
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 relative z-10">
-      <!-- Branding -->
-      <div class="text-center">
-          <h2 class="text-3xl font-bold text-white tracking-wide">AZHAN</h2>
-          <p class="mt-4 text-sm max-w-fit text-center">Front-End Developer with a passion for clean code and futuristic design. Always leveling up.</p>
-      </div>
-      <!-- Navigation -->
-      <div class="text-center">
-          <h3 class="text-xl text-white font-semibold mb-4">Explore</h3>
-          <ul class="space-y-2 text-sm">
-              <li><a href="index.html" class="hover:text-white transition duration-300">Home</a></li>
-              <li><a href="about.html" class="hover:text-white transition duration-300">About</a></li>
-              <li><a href="about.html" class="hover:text-white transition duration-300">About</a></li>
-              <li><a href="contact.html" class="hover:text-white transition duration-300">Education</a></li>
-              <li><a href="#" class="hover:text-white transition duration-300">Projects</a></li>
-          </ul>
-      </div>
-      <!-- Empty column for balance or future expansion -->
-      <div class="text-center md:text-right">
-          <h3 class="text-xl text-white font-semibold mb-4">Stay Inspired</h3>
-          <p class="text-sm italic">"Every line of code is a step toward the future."</p>
+        <div class="w-full bg-gray-700 h-3 rounded overflow-hidden">
+          <div
+            class="bg-gradient-to-r from-yellow-400 to-yellow-600 h-3 rounded w-[90%] transition-all duration-1000 ease-in-out">
+          </div>
+        </div>
       </div>
 
-    </div>
+      <!-- CSS -->
+      <div class="space-y-2">
+        <div class="flex items-center justify-between">
+          <p class="flex items-center gap-2 text-lg font-medium">
+            <i class="fab fa-css3-alt text-blue-400 text-2xl"></i> CSS / Tailwind
+          </p>
+          <span class="text-sm text-gray-300">85%</span>
+        </div>
+        <div class="w-full bg-gray-700 h-3 rounded overflow-hidden">
+          <div
+            class="bg-gradient-to-r from-blue-400 to-cyan-500 h-3 rounded w-[85%] transition-all duration-1000 ease-in-out">
+          </div>
+        </div>
+      </div>
 
-    <!-- Bottom bar -->
-    <div class="mt-10  border-t border-neutral-700 pt-6 text-center text-xs text-neutral-500">
-    &copy; 2025 Azhan — Designed with ⚡ using Tailwind CSS
-    </div>
-  </footer>
+      <!-- JavaScript -->
+      <div class="space-y-2">
+        <div class="flex items-center justify-between">
+          <p class="flex items-center gap-2 text-lg font-medium">
+            <i class="fab fa-js text-yellow-300 text-2xl"></i> JavaScript
+          </p>
+          <span class="text-sm text-gray-300">70%</span>
+        </div>
+        <div class="w-full bg-gray-700 h-3 rounded overflow-hidden">
+          <div
+            class="bg-gradient-to-r from-yellow-300 to-yellow-500 h-3 rounded w-[70%] transition-all duration-1000 ease-in-out">
+          </div>
+        </div>
+      </div>
 
-    
-    <script src="app.js"></script>
+      <!-- Git -->
+      <div class="space-y-2">
+        <div class="flex items-center justify-between">
+          <p class="flex items-center gap-2 text-lg font-medium">
+            <i class="fas fa-code text-green-400 text-2xl"></i> Git & GitHub
+          </p>
+          <span class="text-sm text-gray-300">60%</span>
+        </div>
+        <div class="w-full bg-gray-700 h-3 rounded overflow-hidden">
+          <div
+            class="bg-gradient-to-r from-green-400 to-emerald-500 h-3 rounded w-[60%] transition-all duration-1000 ease-in-out">
+          </div>
+        </div>
+      </div>
+
+      <!-- React.js -->
+      <div class="space-y-2">
+        <div class="flex items-center justify-between">
+          <p class="flex items-center gap-2 text-lg font-medium">
+            <i class="fab fa-react text-cyan-400 text-2xl"></i> React.js
+          </p>
+          <span class="text-sm text-gray-300">60%</span>
+        </div>
+        <div class="w-full bg-gray-700 h-3 rounded overflow-hidden">
+          <div
+            class="bg-gradient-to-r from-cyan-400 to-blue-500 h-3 rounded w-[60%] transition-all duration-1000 ease-in-out">
+          </div>
+        </div>
+      </div>
+
+      <!-- Next.js -->
+      <div class="space-y-2">
+        <div class="flex items-center justify-between">
+          <p class="flex items-center gap-2 text-lg font-medium">
+            <i class="fab fa-node-js text-green-300 text-2xl"></i> Next.js
+          </p>
+          <span class="text-sm text-gray-300">65%</span>
+        </div>
+        <div class="w-full bg-gray-700 h-3 rounded overflow-hidden">
+          <div
+            class="bg-gradient-to-r from-gray-200 to-gray-400 h-3 rounded w-[65%] transition-all duration-1000 ease-in-out">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 🚀 New Education Section -->
+  <section class="bg-[#0b0b0f] py-20 px-4 text-white">
+    <h2 class="text-5xl font-extrabold text-center mb-16">
+      My Education
+    </h2>
+
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-center gap-10">
+
+      <!-- 🔹 School -->
+      <div
+        class="relative group w-full max-w-sm p-6 bg-white/5 rounded-3xl border border-purple-600 backdrop-blur-md shadow-xl hover:shadow-purple-500/40 transition duration-500 hover:scale-105">
+        <div
+          class="absolute -top-10 left-1/2 -translate-x-1/2 bg-purple-600 w-20 h-20 rounded-full flex items-center justify-center shadow-lg ring-4 ring-purple-400/30">
+          <i class="fas fa-school text-white text-2xl"></i>
+        </div>
+        <h3 class="mt-12 text-2xl font-bold text-purple-300 text-center">School</h3>
+        <p class="text-sm text-center text-gray-400 mb-2">Army Public School COD</p>
+        <ul class="text-gray-300 text-sm space-y-1 mt-4 pl-4 list-disc">
+          <li>SSC I: 94%</li>
+          <li>SSC II: 89%</li>
+          <li>Strong foundation in tech & academics</li>
+        </ul>
+      </div>
+
+      <!-- 🔹 College -->
+      <div
+        class="relative group w-full max-w-sm p-6 bg-white/5 rounded-3xl border border-cyan-500 backdrop-blur-md shadow-xl hover:shadow-cyan-500/40 transition duration-500 hover:scale-105">
+        <div
+          class="absolute -top-10 left-1/2 -translate-x-1/2 bg-cyan-500 w-20 h-20 rounded-full flex items-center justify-center shadow-lg ring-4 ring-cyan-400/30">
+          <i class="fas fa-university text-white text-2xl"></i>
+        </div>
+        <h3 class="mt-12 text-2xl font-bold text-cyan-300 text-center">College</h3>
+        <p class="text-sm text-center text-gray-400 mb-2">Army Public College COD</p>
+        <ul class="text-gray-300 text-sm space-y-1 mt-4 pl-4 list-disc">
+          <li>1st Year: 90%+ (Est.)</li>
+          <li>2nd Year: 90%+ (Est.)</li>
+          <li>Deep focus on front-end growth</li>
+        </ul>
+      </div>
+
+      <!-- 🔹 University -->
+      <div
+        class="relative group w-full max-w-sm p-6 bg-white/5 rounded-3xl border border-blue-500 backdrop-blur-md shadow-xl hover:shadow-blue-500/40 transition duration-500 hover:scale-105">
+        <div
+          class="absolute -top-10 left-1/2 -translate-x-1/2 bg-blue-600 w-20 h-20 rounded-full flex items-center justify-center shadow-lg ring-4 ring-blue-400/30">
+          <i class="fas fa-graduation-cap text-white text-2xl"></i>
+        </div>
+        <h3 class="mt-12 text-2xl font-bold text-blue-300 text-center">University (Planned)</h3>
+        <p class="text-sm text-center text-gray-400 mb-2">Computer Science</p>
+        <ul class="text-gray-300 text-sm space-y-1 mt-4 pl-4 list-disc">
+          <li>Mastering React & Next.js</li>
+          <li>Contributing to open-source</li>
+          <li>Building futuristic web projects</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="relative w-full h-fit py-20 px-6 bg-cover bg-center bg-no-repeat overflow-hidden"
+    style="background-image: url('pics/aboutpageimage.jpg');">
+    <div class="absolute inset-0 bg-black/70 backdrop-blur-md z-0 rounded-lg"></div>
+
+    <div class="relative z-10 max-w-5xl mx-auto text-white">
+      <h2 class="text-5xl font-extrabold text-center mb-6">
+        Contact Me
+      </h2>
+      <p class="text-center max-w-2xl mx-auto text-lg text-gray-300 mb-10">
+        Got a project in mind, feedback, or just want to connect? I'm always happy to chat and collaborate!
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- Contact Info -->
+        <div class="space-y-6">
+          <div class="flex items-center gap-4 hover:scale-105 transition-transform duration-300">
+            <i class="fa-brands fa-instagram text-pink-400 text-2xl"></i>
+            <a href="https://instagram.com/mazhanbaig" target="_blank" rel="noopener noreferrer"
+              class="text-base hover:underline">
+              Instagram: @mazhanbaig
+            </a>
+          </div>
+          <div class="flex items-center gap-4 hover:scale-105 transition-transform duration-300">
+            <i class="fa-brands fa-whatsapp text-green-400 text-2xl"></i>
+            <a href="https://wa.me/923227895432" target="_blank" rel="noopener noreferrer"
+              class="text-base hover:underline">
+              WhatsApp: +92 322 7895432
+            </a>
+          </div>
+          <div class="flex items-center gap-4 hover:scale-105 transition-transform duration-300">
+            <i class="fa-solid fa-phone text-amber-400 text-2xl"></i>
+            <a href="tel:+923227895432" class="text-base hover:underline">
+              Phone: +92 322 7895432
+            </a>
+          </div>
+          <div class="flex items-center gap-4 hover:scale-105 transition-transform duration-300">
+            <i class="fa-regular fa-envelope text-red-400 text-2xl"></i>
+            <a href="mailto:mazhanwebdev@example.com" class="text-base hover:underline">
+              Email: mazhanwebdev@example.com
+            </a>
+          </div>
+          <div class="flex items-center gap-4 hover:scale-105 transition-transform duration-300">
+            <i class="fa-solid fa-location-dot text-blue-300 text-2xl"></i>
+            <span class="text-base">Karachi, Pakistan</span>
+          </div>
+        </div>
+
+        <!-- Contact Card -->
+        <div
+          class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md shadow-lg hover:shadow-purple-500/30 transition">
+          <h3 class="text-2xl font-bold mb-4">Let's Build Together</h3>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            I’m open to freelance, internships, and collaboration opportunities. Whether you're a brand, business, or
+            developer — let’s create something awesome!
+          </p>
+          <div class="mt-6">
+            <a href="mailto:mazhanwebdev@example.com"
+              class="inline-block bg-purple-600 text-white px-5 py-2 rounded-full hover:bg-purple-700 transition">
+              Send Email
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="relative bg-black text-neutral-400 pt-10 px-6 mt-24 overflow-hidden border-t border-neutral-700">
+        <div
+          class="absolute w-40 h-40 bg-yellow-500 opacity-10 rounded-full top-[-40px] left-[-40px] animate-ping blur-2xl z-0">
+        </div>
+        <div
+          class="absolute w-40 h-40 bg-cyan-400 opacity-20 rounded-full bottom-[-60px] right-[-60px] animate-pulse blur-2xl z-0">
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
+          <div>
+            <h2 class="text-3xl font-extrabold text-white tracking-wide">AZHAN</h2>
+            <p class="mt-4 text-sm max-w-xs">Front-End Developer passionate about clean code, creative design, and
+              futuristic experiences.</p>
+          </div>
+          <div>
+            <h3 class="text-xl text-white font-semibold mb-4">Explore</h3>
+            <ul class="space-y-2 text-sm">
+              <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+              <li><a href="about.html" class="hover:text-white transition">About</a></li>
+              <li><a href="#contact" class="hover:text-white transition">Contact</a></li>
+              <li><a href="#" class="hover:text-white transition">Projects</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl text-white font-semibold mb-4">Stay Inspired</h3>
+            <p class="text-sm italic">"Every line of code is a step toward the future."</p>
+          </div>
+        </div>
+
+        <div class="mt-10 border-t border-neutral-800 pt-6 text-center text-xs text-neutral-500">
+          &copy; 2025 <strong class="text-white">Azhan</strong> — Built with ⚡ using Tailwind CSS
+        </div>
+      </footer>
+    </div>
+  </section>
+
+  <!-- ✅ JavaScript for mobile menu toggle -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
 </body>
+
 </html>
