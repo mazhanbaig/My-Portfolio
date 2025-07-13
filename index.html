@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Predators AI</title>
+  <title>Azhan Web</title>
   <meta name="description" content="Azhan - Front-End Developer Portfolio">
   <meta name="keywords" content="Front-End, HTML, CSS, JavaScript, Tailwind, React">
   <meta name="author" content="Azhan">
@@ -41,27 +41,30 @@
 
   <!-- Hero Section -->
   <section
-    class="pt-[60px] min-h-[750px] sm:pb-[20px] lg:pb-[40px] w-full bg-cover bg-center bg-fixed sm:flex sm:items-center sm:justify-around sm:gap-[20px]"
+    class="pt-[100px] min-h-[750px] w-full bg-cover bg-center bg-fixed px-4 flex flex-col items-center justify-center text-center gap-6 sm:flex-row sm:justify-around"
     style="background-image: url('pics/first-image.jpg');">
-    <img
-      class="h-[300px] w-[300px] sm:h-[300px] sm:min-w-[300px] md:h-[300px] md:w-[300px] rounded-[140px] sm:rounded-full shadow-lg border-4 border-white object-cover object-center mt-[60px] sm:mb-0 mb-[20px]"
-      src="pics/my-image.jpg" alt="Azhan">
-    <div class="text-center mx-auto max-w-[550px]">
+
+    <!-- Image on Top (mobile) -->
+    <img src="pics/my-image.jpg" alt="Azhan"
+      class="w-[250px] h-[250px] rounded-full border-4 border-white object-cover shadow-lg sm:w-[300px] sm:h-[300px]" />
+
+    <!-- Text below image on mobile -->
+    <div class="max-w-[550px]">
       <h2 class="text-4xl font-bold mb-4 text-white">Hi, I'm Azhan</h2>
-      <p class="text-2xl text-white">I'm a passionate Front-End Web Developer focused on building responsive and
-        user-friendly websites using HTML, CSS, JavaScript, and Tailwind CSS.</p>
-      <div class="btns flex justify-center gap-[50px] items-center">
-        <button
-          class="relative top-[20px] animate-pulse bg-white text-black hover:bg-yellow-700 hover:text-white h-[40px] w-[100px] border-none rounded-xl">Hire
+      <p class="text-xl text-white mb-6">I'm a passionate Front-End Web Developer focused on building responsive and
+        user-friendly websites using HTML, CSS, JavaScript, Tailwind CSS and React(Next.js).</p>
+      <div class="flex justify-center gap-6 flex-wrap">
+        <button class="animate-pulse bg-white text-black hover:bg-yellow-700 hover:text-white px-4 py-2 rounded-xl">Hire
           me!</button>
         <a href="#contact">
           <button
-            class="relative top-[20px] animate-pulse bg-white text-black hover:bg-yellow-700 hover:text-white h-[40px] w-[100px] border-none rounded-xl">Contact
+            class="animate-pulse bg-white text-black hover:bg-yellow-700 hover:text-white px-4 py-2 rounded-xl">Contact
             me</button>
         </a>
       </div>
     </div>
   </section>
+
   <!-- About Me -->
   <section class="h-fit w-full bg-fixed bg-cover bg-center my-auto" style="background-image: url('pics/aboutme.jpg');">
     <div class="bg-black/70 backdrop-blur-xs w-full h-full px-4 py-10">
@@ -105,7 +108,7 @@
 
   <!-- Skills -->
   <section class="bg-black text-white py-16 px-4">
-    <h2 class="text-4xl font-extrabold text-center mb-12 ">My Skills</h2>
+    <h2 class="text-4xl font-extrabold text-center mb-12">My Skills</h2>
     <div class="max-w-5xl mx-auto grid gap-8 md:grid-cols-2">
 
       <!-- HTML -->
@@ -117,13 +120,11 @@
           <span class="text-sm text-gray-300">90%</span>
         </div>
         <div class="w-full bg-gray-700 h-3 rounded overflow-hidden">
-          <div
-            class="bg-gradient-to-r from-yellow-400 to-yellow-600 h-3 rounded w-[90%] transition-all duration-1000 ease-in-out">
-          </div>
+          <div class="bg-gradient-to-r from-orange-400 to-red-500 h-3 rounded w-[90%]"></div>
         </div>
       </div>
 
-      <!-- CSS -->
+      <!-- CSS / Tailwind -->
       <div class="space-y-2">
         <div class="flex items-center justify-between">
           <p class="flex items-center gap-2 text-lg font-medium">
@@ -132,9 +133,7 @@
           <span class="text-sm text-gray-300">85%</span>
         </div>
         <div class="w-full bg-gray-700 h-3 rounded overflow-hidden">
-          <div
-            class="bg-gradient-to-r from-blue-400 to-cyan-500 h-3 rounded w-[85%] transition-all duration-1000 ease-in-out">
-          </div>
+          <div class="bg-gradient-to-r from-blue-500 to-indigo-600 h-3 rounded w-[85%]"></div>
         </div>
       </div>
 
@@ -147,13 +146,11 @@
           <span class="text-sm text-gray-300">70%</span>
         </div>
         <div class="w-full bg-gray-700 h-3 rounded overflow-hidden">
-          <div
-            class="bg-gradient-to-r from-yellow-300 to-yellow-500 h-3 rounded w-[70%] transition-all duration-1000 ease-in-out">
-          </div>
+          <div class="bg-gradient-to-r from-yellow-300 to-yellow-600 h-3 rounded w-[70%]"></div>
         </div>
       </div>
 
-      <!-- Git -->
+      <!-- Git & GitHub -->
       <div class="space-y-2">
         <div class="flex items-center justify-between">
           <p class="flex items-center gap-2 text-lg font-medium">
@@ -162,9 +159,7 @@
           <span class="text-sm text-gray-300">60%</span>
         </div>
         <div class="w-full bg-gray-700 h-3 rounded overflow-hidden">
-          <div
-            class="bg-gradient-to-r from-green-400 to-emerald-500 h-3 rounded w-[60%] transition-all duration-1000 ease-in-out">
-          </div>
+          <div class="bg-gradient-to-r from-green-300 to-emerald-500 h-3 rounded w-[60%]"></div>
         </div>
       </div>
 
@@ -177,9 +172,7 @@
           <span class="text-sm text-gray-300">60%</span>
         </div>
         <div class="w-full bg-gray-700 h-3 rounded overflow-hidden">
-          <div
-            class="bg-gradient-to-r from-cyan-400 to-blue-500 h-3 rounded w-[60%] transition-all duration-1000 ease-in-out">
-          </div>
+          <div class="bg-gradient-to-r from-cyan-400 to-sky-600 h-3 rounded w-[60%]"></div>
         </div>
       </div>
 
@@ -192,14 +185,13 @@
           <span class="text-sm text-gray-300">65%</span>
         </div>
         <div class="w-full bg-gray-700 h-3 rounded overflow-hidden">
-          <div
-            class="bg-gradient-to-r from-gray-200 to-gray-400 h-3 rounded w-[65%] transition-all duration-1000 ease-in-out">
-          </div>
+          <div class="bg-gradient-to-r from-gray-300 to-gray-500 h-3 rounded w-[65%]"></div>
         </div>
       </div>
 
     </div>
   </section>
+
   <!-- 🚀 My Projects Section -->
   <section id="projects" class="bg-[#0b0b0f] py-20 px-6 text-white">
     <h2 class="text-5xl font-extrabold text-center mb-16 ">
@@ -258,6 +250,29 @@
         <a href="https://mybarberproject.netlify.app/" target="_blank" class="text-pink-400 hover:underline">Live
           Demo</a>
       </div>
+      <!-- Portfoloi web -->
+      <div
+        class="bg-white/5 border border-blue-500 rounded-2xl p-6 backdrop-blur-md shadow-lg hover:scale-105 transition duration-300">
+        <!-- Optional: add an image here -->
+        <!-- <img src="your-project.jpg" alt="Project Screenshot" class="rounded-xl mb-4 w-full h-40 object-cover"> -->
+
+        <h3 class="text-xl font-bold mb-2 text-blue-500">My Portfolio</h3>
+        <p class="text-sm text-gray-300 mb-4">
+          A sleek, responsive portfolio built with Tailwind CSS and JavaScript — showcasing my skills, projects, and
+          contact info
+          in a clean layout.
+        </p>
+        <div class="flex flex-wrap gap-2 text-xs mb-4">
+          <span class="bg-gray-700 px-2 py-1 rounded">HTML</span>
+          <span class="bg-gray-700 px-2 py-1 rounded">Tailwind CSS</span>
+          <span class="bg-gray-700 px-2 py-1 rounded">JavaScript</span>
+        </div>
+        <a href="https://mazhanbaig7.netlify.app/" target="_blank" class="text-blue-400 hover:underline">
+          Live Demo
+        </a>
+      </div>
+
+
     </div>
   </section>
 
